@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Step | brands</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <!-- for mobile navbar section  -->
+
+    <div
+      class="mobileNav lg:hidden right-[-100vw] fixed bg-slate-800 w-[100vw] min-h-[93vh] z-50 py-[3vh]"
+    >
+      <div
+        id="menu"
+        class="w-full flex items-center justify-between px-6 pb-6 border-b-[2px]"
+      >
+        <a href="./index.html"
+          ><img src="./images/logo.png" alt="" class="w-[15vh]"
+        /></a>
+        <i class="fa-solid fa-xmark text-3xl text-white menuBar"></i>
+      </div>
+      <ul class="text-white px-[3vh] pt[4vh]">
+        <a href="./products.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center navProducts"
+          >
+            Shoes<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./products.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center navProducts"
+          >
+            Slippers<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./brand.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center"
+          >
+            Brands<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./my-order.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center"
+          >
+            My Orders<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./help.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center"
+          >
+            Help<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+      </ul>
+
+      <div class="account flex justify-center items-center pt-[5vh]">
+        <div
+          class="bg-slate-700 hover:bg-slate-600 flex justify-center items-center text-white text-[2.5vh] px-8 gap-3 py-2 rounded-2xl login-close-btn"
+        >
+          <i class="fa-solid fa-user text-[2vh]"></i> Account
+        </div>
+      </div>
+
+      <div
+        class="socialIcon absolute bottom-0 flex justify-between py-5 items-center w-[100%] px-6 border-t-[2px]"
+      >
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-3 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- mobile navbar section end  -->
+
+    <!-- header section  -->
+
+    <header class="z-20 fixed w-full top-0">
+      <div
+        class="h-20 w-full flex justify-between items-center px-2 lg:px-10 bg-slate-900 text-white"
+      >
+        <div class="logo">
+          <a href="./index.html"
+            ><img src="./images/logo.png" alt="" class="w-32"
+          /></a>
+        </div>
+
+        <nav class="lg:flex hidden">
+          <ul class="flex justify-center items-center gap-5">
+            <a href="./products.html"
+              ><li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl uppercase navProducts shoesActive"
+              >
+                Shoes
+              </li></a
+            >
+            <a href="./products.html">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl uppercase navProducts slipperActive"
+              >
+                Slippers
+              </li>
+            </a>
+            <a href="./brand.html">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer bg-slate-800 rounded-3xl uppercase"
+              >
+                Brands
+              </li>
+            </a>
+            <a href="./my-order.html">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl uppercase"
+              >
+                My Order
+              </li>
+            </a>
+            <a href="./help.html">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl uppercase"
+              >
+                Help
+              </li>
+            </a>
+          </ul>
+        </nav>
+
+        <div class="right flex justify-center items-center gap-2 lg:gap-4">
+          <i
+            class="fa-solid fa-magnifying-glass p-3 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 operSearch"
+          ></i>
+          <i
+            class="fa-solid fa-cart-shopping p-[.6rem] rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 addToCartCloseBtn flex items-center gap-2"
+            ><span class="px-2 py-1 bg-red-700 rounded-full text-xs itemCount"
+              >0</span
+            ></i
+          >
+          <i
+            class="fa-solid fa-user p-3 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 lg:flex hidden login-close-btn"
+          ></i>
+          <i
+            class="fa-solid fa-bars p-3 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 lg:hidden flex menuBar"
+          ></i>
+        </div>
+      </div>
+      <div
+        class="absolute searchBar hidden w-full bg-white justify-center items-center gap-1 px-2 lg:px-8"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass text-xl cursor-pointer px-2 lg:px-4 py-2 text-slate-800"
+        ></i>
+        <input
+          type="text"
+          placeholder="Search here for any kinds of Shoes & Slipper..."
+          class="w-[100vw] h-10 px-2 tracking-wider outline-none"
+        />
+        <i
+          class="fa-solid fa-xmark px-[.9rem] py-2 text-xl cursor-pointer closeSearch hover:bg-slate-600 rounded-full hover:text-white"
+        ></i>
+      </div>
+      <div
+        class="searchedItemsMainDiv absolute w-full h-[60vh] overflow-y-scroll hidden bg-white mt-16 px-4 lg:px-12 py-2 border-t-2"
+      ></div>
+    </header>
+
+    <!-- header section end  -->
+
+    <!-- for login section  -->
+
+    <div
+      class="login-frame hidden account-section fixed w-[95%] lg:w-[30rem] left-[50%] top-[50%] translate-x-[-50%] rounded-lg translate-y-[-50%] lg:h-[32rem] h-[65%] bg-slate-900 z-30 text-white"
+    >
+      <div class="login flex flex-col h-full w-full">
+        <div
+          class="login-heading flex justify-between items-center border-b-[.5px] border-[#bcbcbc] px-6 h-[15%]"
+        >
+          <h4 class="text-white text-xl tracking-wider loginRegister">LOGIN</h4>
+          <i
+            class="fa-solid fa-xmark text-white text-xl px-[1rem] py-[.6rem] cursor-pointer rounded-full hover:bg-slate-700 login-close-btn"
+          ></i>
+        </div>
+        <div
+          class="loginForm flex flex-col justify-start items-center h-[85%] gap-8 py-6"
+        >
+          <i
+            class="fa-solid fa-user text-4xl py-5 px-6 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700"
+          ></i>
+          <form action="" class="w-[80%] flex flex-col gap-5">
+            <input
+              type="text"
+              placeholder="Enter Your Name..."
+              class="h-10 px-4 outline-none tracking-wider user-name hidden text-black"
+            />
+            <input
+              type="text"
+              placeholder="Enter Your Email..."
+              class="h-10 px-4 outline-none tracking-wider text-black"
+            />
+            <input
+              type="password"
+              placeholder="Password..."
+              class="h-10 px-4 outline-none tracking-wider text-black"
+            />
+            <span class="cursor-pointer hover:text-slate-400 forget-password"
+              >Forget Password ?</span
+            >
+            <button
+              class="submit bg-slate-800 text-lg tracking-wider h-10 hover:bg-slate-700 loginRegister"
+            >
+              Login
+            </button>
+            <p class="text-center create-accout">
+              Don't have an account?
+              <span
+                class="hover:text-slate-400 pb-[1px] cursor-pointer border-b-[.5px]"
+                >Create one</span
+              >
+            </p>
+            <p class="hidden text-center login-account">
+              You have an account?
+              <span
+                class="hover:text-slate-400 pb-[1px] cursor-pointer border-b-[.5px]"
+                >Login</span
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- login section end  -->
+
+    <!-- for add to cart section  -->
+
+    <div
+      class="addToCart h-[100vh] md:w-[70vw] w-[100vw] lg:w-[40vw] bg-slate-950 z-30 fixed right-[-100vw] text-white lg:p-6 p-4 overflow-hidden"
+    >
+      <div
+        class="header flex justify-between items-center border-b-[.5px] border-slate-500 pb-4"
+      >
+        <h2 class="text-2xl uppercase tracking-wider">Add To Cart</h2>
+        <i
+          class="fa-solid fa-xmark text-2xl lg:py-2 py-1 lg:px-4 px-3 rounded-full cursor-pointer hover:bg-slate-800 addToCartCloseBtn"
+        ></i>
+      </div>
+
+      <div
+        class="overflow-hidden overflow-y-scroll h-full w-full itemBox"
+      ></div>
+      <div class="emptyCart">
+        <div class="w-full h-[70vh] flex flex-col items-center justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png"
+            alt=""
+            class="w-32 pb-10"
+          />
+          <p class="text-3xl tracking-wide uppercase">Your Cart Is Empty</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- add to cart section end  -->
+
+    <article id="article" class="bg-white z-10 w-full pt-20">
+      <!-- for hero image section  -->
+
+      <div class="w-full relative">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white z-10 text-center text-lg md:text-2xl font-semibold tracking-wide"
+        >
+          <h2>Dream Steps Promise</h2>
+          <h2>Sustainability</h2>
+        </div>
+        <img
+          src=""
+          alt=""
+          class="h-[23vh] lg:h-auto w-full object-cover cursor-pointer brightness-[30%] brands-hero"
+        />
+      </div>
+
+      <!-- hero image section end  -->
+
+      <!-- for brand page heading  -->
+
+      <div class="lg:px-20 py-10 px-4 flex justify-between items-center">
+        <div class="lg:text-3xl text-2xl font-semibold tracking-wider">
+          Brands
+        </div>
+        <div class="text-xl flex items-center gap-2 lg:gap-4">
+          <a href="./index.html"
+            ><i
+              class="fa-solid fa-house text-slate-600 border-b-[3px] hover:border-slate-500 border-transparent cursor-pointer lg:text-lg text-[1.4rem]"
+            ></i></a
+          ><i class="fa-solid fa-angle-right text-sm text-slate-500"></i
+          ><span
+            class="product-name-productPage tracking-wider text-slate-500 text-[1rem] font-semibold"
+            >Brands</span
+          >
+        </div>
+      </div>
+
+      <!-- brand page heading end  -->
+
+      <!-- for Sustainability section  -->
+
+      <div class="lg:mx-20 py-5 mx-4 flex flex-col gap-5 bg-slate-900 mb-8">
+        <div class="w-full p-2 border-b border-gray-600 pb-8">
+          <p
+            class="md:text-2xl text-white text-center font-semibold tracking-wide"
+          >
+            At Dream Step's, Sustainability is Beyond Just a Promise.
+          </p>
+        </div>
+        <div class="w-full p-2 flex lg:flex-row flex-col gap-5">
+          <div
+            class="flex-1 py-7 px-4 lg:px-8 h-[15rem] lg:border-r max-lg:border-b border-gray-600"
+          >
+            <div class="w-full flex justify-center pb-5">
+              <i class="fa-solid fa-earth-americas text-4xl text-slate-300"></i>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center text-slate-300"
+            >
+              <h2 class="lg:text-[1.5rem] text-[1.2rem] font-semibold pb-3">
+                What is our guiding principle ?
+              </h2>
+              <p class="text-center">
+                Be mindful of what we create, what goes into making it, and how
+                it impacts our surroundings.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex-1 py-7 px-4 lg:px-8 h-[15rem] lg:border-r max-lg:border-b border-gray-600"
+          >
+            <div class="w-full flex justify-center pb-5">
+              <i class="fa-solid fa-crosshairs text-4xl text-slate-300"></i>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center text-slate-300"
+            >
+              <h2 class="lg:text-[1.5rem] text-[1.2rem] font-semibold pb-3">
+                What is our aim ?
+              </h2>
+              <p class="text-center">Circularity and transparency</p>
+            </div>
+          </div>
+          <div class="flex-1 py-7 px-4 lg:px-8 h-[15rem]">
+            <div class="w-full flex justify-center pb-5">
+              <i class="fa-solid fa-person text-4xl text-slate-300"></i>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center text-slate-300"
+            >
+              <h2 class="lg:text-[1.5rem] text-[1.2rem] font-semibold pb-3">
+                What it means for us ?
+              </h2>
+              <p class="text-center">
+                Striving to be better than yesterday for the tomorrow that
+                awaits the next generation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sustainability section end  -->
+
+      <!-- for Quantifiable Impact section  -->
+
+      <div class="lg:px-20 py-5 px-4 flex flex-col gap-5 bg-[#e8dcca38] mb-8">
+        <div class="flex flex-col items-center">
+          <h2 class="text-3xl font-semibold pb-3">Quantifiable Impact</h2>
+          <p class="lg:text-lg text-gray-700 text-center font-semibold">
+            Dream Steps adopts forward-thinking practices in materials,
+            processes, and customer interactions.
+          </p>
+        </div>
+        <div
+          class="flex lg:flex-row flex-col-reverse items-center justify-between"
+        >
+          <div
+            class="lg:w-[50%] flex flex-col gap-12 items-start lg:pl-[10vw] justify-center"
+          >
+            <div class="flex items-center gap-5">
+              <i class="fa-solid fa-bottle-water text-5xl text-slate-600"></i>
+              <div>
+                <div class="lg:text-2xl text-lg font-semibold text-green-600">
+                  <span class="plastic-number"></span> <span>+</span>
+                </div>
+                <p class="lg:text-lg text-slate-500 font-semibold lg:pt-2">
+                  Plastic bottles recycled
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <i class="fa-solid fa-gear text-3xl text-slate-600"></i>
+              <div>
+                <div class="lg:text-2xl text-lg font-semibold text-green-600">
+                  <span class="tyre-number"></span> <span>Kg's</span>
+                </div>
+                <p class="lg:text-lg text-slate-500 font-semibold lg:pt-2">
+                  Tyres recycled
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <i class="fa-solid fa-bag-shopping text-3xl text-slate-600"></i>
+              <div>
+                <div class="lg:text-2xl text-lg font-semibold text-green-600">
+                  <span class="plastic-bag-number"></span> <span>+</span>
+                </div>
+                <p class="lg:text-lg text-slate-500 font-semibold lg:pt-2">
+                  Plastic Bags avoided with paper packaging.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/2428/5565/files/AdobeStock_599155608_090623_1.svg?v=1698993497"
+              alt=""
+              class="md:w-full w-[16rem]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Quantifiable Impact section end  -->
+    </article>
+
+    <!-- for footer section  -->
+
+    <footer class="text-gray-200 body-font bg-slate-900 pt-20">
+      <div>
+        <div class="footer-logo flex justify-center pt-10">
+          <a href="./index.html"
+            ><img src="./images/logo.png" alt="" class="lg:w-52 w-32"
+          /></a>
+        </div>
+      </div>
+      <div
+        class="container px-5 pt-4 lg:pt-12 pb-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-4 md:text-left text-center"
+        >
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              SHOP BY CATEGORY
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Shoes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Sneakers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Slippers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Sandals</a
+                >
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              SHOP BY TYPE
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >New Arrivals</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Best Seller</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Formal Shoes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Casual Shoes</a
+                >
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              INFORMATION
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Track Your Order</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Positive Change</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >The Journey</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Why Dream Steps</a
+                >
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              GUIDES
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Shoe Care</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Returns Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Cookie Policy</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-800">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-gray-300 text-sm text-center sm:text-left">
+            © 2024 Dream Steps —
+            <a
+              href="https://rohan04022003.github.io/myPortfolio"
+              rel="noopener noreferrer"
+              class="text-gray-500 ml-1"
+              target="_blank"
+              >@rohankumar</a
+            >
+          </p>
+          <span
+            class="inline-flex gap-4 sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+          >
+            <a
+              href="https://instagram.com/rohankumarmahto01?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
+              target="_blank"
+              ><i class="fa-brands fa-instagram btn instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100015224166657 "
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f btn facebook"></i
+            ></a>
+            <a href="https://github.com/Rohan04022003" target="_blank"
+              ><i class="fa-brands fa-github btn github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/rohan-kumar-5521aa253 "
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in btn linkedin"></i
+            ></a>
+            <a href="https://twitter.com/Rohankumar0402 " target="_blank"
+              ><i class="fa-brands fa-twitter btn twitter"></i
+            ></a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer section end  -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

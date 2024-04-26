@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Step | Best plateform for any kinds of Shoes & Slipper</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <!-- for notification section  -->
+
+    <div
+      class="notification fixed p-5 bottom-5 -right-[30rem] z-40 text-white bg-[#177d0eef]"
+    >
+      <div>
+        <span class="itemCountBox tracking-wide lg:text-base text-sm"></span>
+        <span class="addedMessage tracking-wide lg:text-base text-sm"></span>
+      </div>
+    </div>
+
+    <!-- notification end  -->
+
+    <!-- for products Details section  -->
+
+    <div
+      id="showItems"
+      class="overflow-hidden rounded-lg fixed w-[23rem] md:w-[40rem] h-[35rem] md:h-[30rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-800 z-30 hidden"
+    >
+      <div
+        class="absolute top-4 right-4 py-[.4rem] px-[.8rem] rounded-full text-white bg-slate-700 product-page-close cursor-pointer hover:bg-slate-600 duration-300"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="flex-col product-details">
+        <div class="md:h-[15rem] h-[35rem] w-full md:flex md:flex-row flex-col">
+          <div class="left md:w-[20rem] w-full md:h-[15rem] h-[17.5rem]">
+            <img src="" alt="" class="product-img h-full w-full object-cover" />
+          </div>
+          <div
+            class="right md:w-[20rem] w-full md:h-[15rem] h-[17.5rem] md:p-4 p-6 text-white flex-col flex gap-4"
+          >
+            <h2 class="text-white text-2xl product-name"></h2>
+            <div id="product-price"></div>
+            <div>
+              <div class="md:pt-0 pt-4 pb-6 flex gap-2">
+                <button
+                  class="bg-slate-700 hover:bg-slate-600 duration-300 px-5 py-2 tracking-wide rounded-lg address-page"
+                >
+                  BUY</button
+                ><button
+                  class="bg-slate-700 hover:bg-slate-600 duration-300 px-5 py-2 tracking-wide rounded-lg uppercase"
+                >
+                  Check Out
+                </button>
+              </div>
+              <p>
+                <span class="text-red-600 font-semibold">Note : </span>Lorem
+                ipsum dolor sit amet consectetur adipisicing elit placeat.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="md:h-[15rem] h-[17.5rem] w-full md:block hidden border-t-2 px-4 py-2"
+        >
+          <h3 class="text-xl text-white pb-3">Description</h3>
+          <p class="text-[#dbdbdb]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quos
+            cumque unde iste nesciunt aspernatur non officiis ratione quae
+            dolorum excepturi repellendus veniam temporibus, voluptatibus
+            dolores ipsum nisi? Aut, ea eum sapiente distinctio odio libero
+            delectus. Ad totam non, eum fugit perferendis omnis debitis placeat
+            optio a ducimus distinctio voluptas impedit numquam expedita
+            officiis incidunt nostrum enim alias laboriosam eligendi?
+          </p>
+        </div>
+      </div>
+      <div class="hidden address text-white">
+        <h2 class="py-6 text-white text-xl px-4 font-semibold tracking-wide">
+          Order InFo
+        </h2>
+        <div class="flex flex-col gap-6 lg:px-24 px-8 lg:mt-3 mt-10">
+          <input
+            type="text"
+            name="name"
+            class="h-12 rounded-md bg-transparent border px-4 customer-name"
+            placeholder="Enter Your Name"
+            required
+          />
+          <input
+            type="number"
+            name="name"
+            class="h-12 rounded-md bg-transparent border px-4 customer-mob"
+            placeholder="Enter Your Mobile No."
+            required
+          />
+          <input
+            type="text"
+            name="name"
+            class="h-12 rounded-md bg-transparent border px-4 customer-address"
+            placeholder="Enter Your Address."
+            required
+          />
+          <input
+            type="number"
+            name="name"
+            class="h-12 rounded-md bg-transparent border px-4 customer-pin"
+            placeholder="Pin Code"
+            required
+          />
+
+          <div class="w-full flex justify-center">
+            <button
+              class="mt-3 px-6 py-3 bg-slate-700 text-white lg:w-52 w-44 rounded-md font-semibold hover:bg-slate-600 buyProduct"
+            >
+              Order Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- product Details section end  -->
+
+    <!-- for mobile navbar  -->
+
+    <div
+      class="mobileNav lg:hidden right-[-100vw] fixed bg-slate-800 w-[100vw] min-h-[93vh] z-50 py-[3vh]"
+    >
+      <div
+        id="menu"
+        class="w-full flex items-center justify-between px-6 pb-6 border-b-[2px]"
+      >
+        <a href="./index.html"
+          ><img src="./images/logo.png" alt="" class="w-[15vh]"
+        /></a>
+        <i class="fa-solid fa-xmark text-3xl text-white menuBar"></i>
+      </div>
+      <ul class="text-white px-[3vh] pt[4vh]">
+        <a href="./products.html" class="uppercase">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center navProducts"
+          >
+            Shoes<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./products.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center navProducts"
+          >
+            Slippers<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./brand.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center"
+          >
+            Brands<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./my-order.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center"
+          >
+            My Orders<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+        <a href="./help.html">
+          <li
+            class="text-[2vh] uppercase tracking-wider py-[3vh] border-b-[1px] flex justify-between items-center"
+          >
+            Help<i class="fa-solid fa-plus"></i>
+          </li>
+        </a>
+      </ul>
+
+      <div class="account flex justify-center items-center pt-[5vh]">
+        <div
+          class="bg-slate-700 hover:bg-slate-600 flex justify-center items-center text-white text-[2.5vh] px-8 gap-3 py-2 rounded-2xl login-close-btn"
+        >
+          <i class="fa-solid fa-user text-[2vh]"></i> Account
+        </div>
+      </div>
+
+      <div
+        class="socialIcon absolute bottom-0 flex justify-between py-5 items-center w-[100%] px-6 border-t-[2px]"
+      >
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-3 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a
+          href=""
+          class="text-2xl text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- mobile navbar end  -->
+
+    <!-- for header section  -->
+
+    <header class="z-20 fixed w-full top-0">
+      <div
+        class="h-20 w-full flex justify-between items-center px-2 lg:px-10 bg-slate-900 text-white"
+      >
+        <div class="logo">
+          <a href=""><img src="./images/logo.png" alt="" class="w-32" /></a>
+        </div>
+
+        <nav class="lg:flex hidden">
+          <ul class="flex justify-center items-center gap-5">
+            <a href="./products.html" class="uppercase"
+              ><li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl navProducts"
+              >
+                Shoes
+              </li></a
+            >
+            <a href="./products.html" class="uppercase">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl navProducts"
+              >
+                Slippers
+              </li>
+            </a>
+            <a href="./brand.html" class="uppercase">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl navProducts"
+              >
+                Brands
+              </li>
+            </a>
+            <a href="./my-order.html">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl navProducts"
+              >
+                My Order
+              </li>
+            </a>
+            <a href="help.html">
+              <li
+                class="text-[1rem] tracking-wider px-4 py-2 cursor-pointer rounded-3xl navProducts"
+              >
+                Help
+              </li>
+            </a>
+          </ul>
+        </nav>
+
+        <div class="right flex justify-center items-center gap-2 lg:gap-4">
+          <i
+            class="fa-solid fa-magnifying-glass p-3 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 operSearch"
+          ></i>
+          <i
+            class="fa-solid fa-cart-shopping p-[.6rem] rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 addToCartCloseBtn flex items-center gap-2"
+            ><span class="px-2 py-1 bg-red-700 rounded-full text-xs itemCount"
+              >0</span
+            ></i
+          >
+          <i
+            class="fa-solid fa-user p-3 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 lg:flex hidden login-close-btn"
+          ></i>
+          <i
+            class="fa-solid fa-bars p-3 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700 lg:hidden flex menuBar"
+          ></i>
+        </div>
+      </div>
+      <div
+        class="absolute searchBar hidden w-full bg-white justify-center items-center gap-1 px-2 lg:px-8"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass text-xl cursor-pointer px-2 lg:px-4 py-2 text-slate-800"
+        ></i>
+        <input
+          type="text"
+          placeholder="Search here for any kinds of Shoes & Slipper..."
+          class="w-[100vw] h-10 px-2 tracking-wider outline-none"
+        />
+        <i
+          class="fa-solid fa-xmark px-[.9rem] py-2 text-xl cursor-pointer closeSearch hover:bg-slate-600 rounded-full hover:text-white"
+        ></i>
+      </div>
+      <div
+        class="searchedItemsMainDiv absolute w-full h-[60vh] overflow-y-scroll hidden bg-white mt-16 px-4 lg:px-12 py-2 border-t-2"
+      ></div>
+    </header>
+
+    <!-- header section end  -->
+
+    <!-- for login form  -->
+
+    <div
+      class="login-frame hidden account-section fixed w-[95%] lg:w-[30rem] left-[50%] top-[50%] translate-x-[-50%] rounded-lg translate-y-[-50%] lg:h-[32rem] h-[65%] bg-slate-900 z-30 text-white"
+    >
+      <div class="login flex flex-col h-full w-full">
+        <div
+          class="login-heading flex justify-between items-center border-b-[.5px] border-[#bcbcbc] px-6 h-[15%]"
+        >
+          <h4 class="text-white text-xl tracking-wider loginRegister">LOGIN</h4>
+          <i
+            class="fa-solid fa-xmark text-white text-xl px-[1rem] py-[.6rem] cursor-pointer rounded-full hover:bg-slate-700 login-close-btn"
+          ></i>
+        </div>
+        <div
+          class="loginForm flex flex-col justify-start items-center h-[85%] gap-8 py-6"
+        >
+          <i
+            class="fa-solid fa-user text-4xl py-5 px-6 rounded-full bg-slate-800 cursor-pointer hover:bg-slate-700"
+          ></i>
+          <form action="" class="w-[80%] flex flex-col gap-5">
+            <input
+              type="text"
+              placeholder="Enter Your Name..."
+              class="h-10 px-4 outline-none tracking-wider user-name hidden text-black"
+            />
+            <input
+              type="text"
+              placeholder="Enter Your Email..."
+              class="h-10 px-4 outline-none tracking-wider text-black"
+            />
+            <input
+              type="password"
+              placeholder="Password..."
+              class="h-10 px-4 outline-none tracking-wider text-black"
+            />
+            <span class="cursor-pointer hover:text-slate-400 forget-password"
+              >Forget Password ?</span
+            >
+            <button
+              class="submit bg-slate-800 text-lg tracking-wider h-10 hover:bg-slate-700 loginRegister"
+            >
+              Login
+            </button>
+            <p class="text-center create-accout">
+              Don't have an account?
+              <span
+                class="hover:text-slate-400 pb-[1px] cursor-pointer border-b-[.5px]"
+                >Create one</span
+              >
+            </p>
+            <p class="hidden text-center login-account">
+              You have an account?
+              <span
+                class="hover:text-slate-400 pb-[1px] cursor-pointer border-b-[.5px]"
+                >Login</span
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- login form end  -->
+
+    <!-- for add to cart section  -->
+
+    <div
+      class="addToCart h-[100vh] md:w-[70vw] w-[100vw] lg:w-[40vw] bg-slate-950 z-30 fixed right-[-100vw] text-white lg:p-6 p-4 overflow-hidden"
+    >
+      <div
+        class="header flex justify-between items-center border-b-[.5px] border-slate-500 pb-4"
+      >
+        <h2 class="text-2xl uppercase tracking-wider">Add To Cart</h2>
+        <i
+          class="fa-solid fa-xmark text-2xl lg:py-2 py-1 lg:px-4 px-3 rounded-full cursor-pointer hover:bg-slate-800 addToCartCloseBtn"
+        ></i>
+      </div>
+
+      <div
+        class="overflow-hidden overflow-y-scroll h-full w-full itemBox"
+      ></div>
+      <div class="emptyCart">
+        <div class="w-full h-[70vh] flex flex-col items-center justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png"
+            alt=""
+            class="w-32 pb-10"
+          />
+          <p class="text-3xl tracking-wide uppercase">Your Cart Is Empty</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- add to cart section end  -->
+
+    <article id="article" class="bg-white z-10 w-full pt-20">
+      <!-- for hero image  -->
+
+      <div class="heroImg relative bg-fixed">
+        <a href="./products.html" class="heroBuyBtn fixed">BUY</a>
+        <img
+          src="./images/img1.jpg"
+          class="h-[30vh] lg:h-[70vh] w-full object-cover cursor-pointer"
+        />
+      </div>
+
+      <!-- hero image end  -->
+
+      <!-- for return policy section  -->
+
+      <div
+        class="returnPolicy w-full h-auto py-4 gap-5 px-4 bg-[#E7F3EC] grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 lg:place-items-center place-items-start"
+      >
+        <div class="flex justify-center items-center gap-4 lg:gap-2 font-bold">
+          <i
+            class="fa-solid fa-rotate-left bg-[#C4E7D2] w-14 h-14 flex justify-center text-[#007E45] items-center rounded-full text-2xl"
+          ></i
+          ><span>7 Days Free Exchange</span>
+        </div>
+        <div class="flex justify-center items-center gap-4 lg:gap-2 font-bold">
+          <i
+            class="fa-solid fa-globe bg-[#C4E7D2] w-14 h-14 flex justify-center text-[#007E45] items-center rounded-full text-2xl"
+          ></i
+          ><span>Proudly Made in india</span>
+        </div>
+        <div class="flex justify-center items-center gap-4 lg:gap-2 font-bold">
+          <i
+            class="fa-solid fa-truck bg-[#C4E7D2] w-14 h-14 flex justify-center text-[#007E45] items-center rounded-full text-2xl"
+          ></i
+          ><span>Deliverd in 4-5 Days</span>
+        </div>
+        <div class="flex justify-center items-center gap-4 lg:gap-2 font-bold">
+          <i
+            class="fa-brands fa-envira bg-[#C4E7D2] w-14 h-14 flex justify-center text-[#007E45] items-center rounded-full text-2xl"
+          ></i
+          ><span>Eco Friendly fashoin</span>
+        </div>
+      </div>
+
+      <!-- return policy section end  -->
+
+      <!-- first product section  -->
+
+      <div class="products my-10 lg:px-[5.5vw] px-4 flex flex-col gap-8">
+        <div class="productsHeading flex justify-between items-center">
+          <h2 class="xl:text-4xl font-bold text-2xl tracking-wider">
+            New Launches
+          </h2>
+          <a
+            href=""
+            class="py-[.8rem] px-[1.1rem] rounded-full bg-slate-800 hover:bg-slate-700 cursor-pointer text-white"
+            ><i class="fa-solid fa-arrow-right lg:text-[1rem]"></i
+          ></a>
+        </div>
+        <div
+          class="product-row grid lg:grid-cols-4 gap-2 md:grid-cols-2 grid-cols-1"
+        >
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-SC-Grey-_WebOptimized_c_1000x.jpg?v=1711101824"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">sporty casuals</h4>
+                <p class="flex gap-4">
+                  Rs.1599
+                  <strike class="text-gray-400 tracking-wide">Rs.4399</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-DL-Black-_WebOptimized_c_1000x.jpg?v=1709302964"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">dress loafers</h4>
+                <p class="flex gap-4">
+                  Rs.1979
+                  <strike class="text-gray-400 tracking-wide">Rs.3499</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-GFS-Black-_WebOptimized_c_1000x.jpg?v=1704369325"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">easy walk slip ons</h4>
+                <p class="flex gap-4">
+                  Rs.1889
+                  <strike class="text-gray-400 tracking-wide">Rs.4199</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-LightWalkers-ClassicWhite-_WebOptimized_d_1000x.jpg?v=1709408036"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">light walkers</h4>
+                <p class="flex gap-4">
+                  Rs.1499
+                  <strike class="text-gray-400 tracking-wide">Rs.3249</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- first prodcut section end  -->
+
+      <!-- for shoes banner section  -->
+
+      <div
+        class="shoes-banner grid lg:grid-cols-4 gap-2 md:grid-cols-2 grid-cols-1 lg:px-[5.5vw] px-4 mb-10"
+      >
+        <div class="relative shoes-banner-product">
+          <div
+            class="absolute w-full h-full bg-black z-20 flex flex-col justify-center items-center gap-3 shoes-banner-overly"
+          >
+            <h3 class="text-xl font-bold">ATHLEISURE FOR MEN</h3>
+            <p>Vibe With Urban Style</p>
+            <button
+              class="shoes-banner-btn px-4 py-2 font-semibold rounded-full"
+            >
+              BUY NOW
+            </button>
+          </div>
+          <img src="./images/img3.jpg" alt="" class="cursor-pointer" />
+        </div>
+        <div class="relative shoes-banner-product">
+          <div
+            class="absolute w-full h-full bg-black z-20 flex flex-col justify-center items-center gap-3 shoes-banner-overly"
+          >
+            <h3 class="text-xl font-bold">SNEAKERS FOR WOMEN</h3>
+            <p>Groove-On in Glam Sneaks</p>
+            <button
+              class="shoes-banner-btn px-4 py-2 font-semibold rounded-full"
+            >
+              BUY NOW
+            </button>
+          </div>
+          <img src="./images/img4.jpg" alt="" class="cursor-pointer" />
+        </div>
+        <div class="relative shoes-banner-product">
+          <div
+            class="absolute w-full h-full bg-black z-20 flex flex-col justify-center items-center gap-3 shoes-banner-overly"
+          >
+            <h3 class="text-xl font-bold">SNEAKERS FOR MEN</h3>
+            <p>Explore The Sneaker Swagger</p>
+            <button
+              class="shoes-banner-btn px-4 py-2 font-semibold rounded-full"
+            >
+              BUY NOW
+            </button>
+          </div>
+          <img src="./images/img5.jpg" alt="" class="cursor-pointer" />
+        </div>
+        <div class="relative shoes-banner-product">
+          <div
+            class="absolute w-full h-full bg-black z-20 flex flex-col justify-center items-center gap-3 shoes-banner-overly"
+          >
+            <h3 class="text-xl font-bold">KIDS COLLECTION</h3>
+            <p>Classroom Ready & Playground Trendy</p>
+            <button
+              class="shoes-banner-btn px-4 py-2 font-semibold rounded-full"
+            >
+              BUY NOW
+            </button>
+          </div>
+          <img src="./images/img6.jpg" alt="" class="cursor-pointer" />
+        </div>
+      </div>
+
+      <!-- shoes banner section end  -->
+
+      <!-- second product section  -->
+
+      <div class="products my-10 lg:px-[5.5vw] px-4 flex flex-col gap-8">
+        <div class="productsHeading flex justify-between items-center">
+          <h2 class="xl:text-4xl font-bold text-2xl tracking-wider">
+            Striped Fusion Flips
+          </h2>
+          <a
+            href=""
+            class="py-[.8rem] px-[1.1rem] rounded-full bg-slate-800 hover:bg-slate-700 cursor-pointer text-white"
+            ><i class="fa-solid fa-arrow-right lg:text-[1rem]"></i
+          ></a>
+        </div>
+        <div
+          class="product-row grid lg:grid-cols-4 gap-2 md:grid-cols-2 grid-cols-1"
+        >
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-Trio-BluenRed_WebOptimized_a_1000x.jpg?v=1705990913"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">
+                  Striped Fusion Flips
+                </h4>
+                <p class="flex gap-4">
+                  Rs.699
+                  <strike class="text-gray-400 tracking-wide">Rs.1499</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-Trio-BrownnOrange_WebOptimized_a_1000x.jpg?v=1705990913"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">
+                  Striped Fusion Flips
+                </h4>
+                <p class="flex gap-4">
+                  Rs.699
+                  <strike class="text-gray-400 tracking-wide">Rs.1499</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-Trio-BluenOrange_WebOptimized_a_1000x.jpg?v=1705908615"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">
+                  Striped Fusion Flips
+                </h4>
+                <p class="flex gap-4">
+                  Rs.699
+                  <strike class="text-gray-400 tracking-wide">Rs.1499</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-Trio-GreennBlack_WebOptimized_a_1000x.jpg?v=1705990913"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">
+                  Striped Fusion Flips
+                </h4>
+                <p class="flex gap-4">
+                  Rs.699
+                  <strike class="text-gray-400 tracking-wide">Rs.1499</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- second product section end  -->
+
+      <!-- for video row section  -->
+
+      <div
+        class="video-row grid lg:grid-cols-4 gap-2 grid-cols-1 lg:px-[5.5vw] px-4 place-content-center"
+      >
+        <div class="relative video lg:flex md:hidden max-md:flex">
+          <button class="video-btn"><i class="fa-solid fa-play"></i></button>
+          <video
+            src="./videos/v1.mp4"
+            muted
+            loop
+            class="video cursor-pointer"
+          ></video>
+        </div>
+        <div class="relative video lg:flex hidden">
+          <button class="video-btn"><i class="fa-solid fa-play"></i></button>
+          <video
+            src="./videos/v2.mp4"
+            muted
+            loop
+            class="video cursor-pointer"
+          ></video>
+        </div>
+        <div class="relative video lg:flex hidden">
+          <button class="video-btn"><i class="fa-solid fa-play"></i></button>
+          <video
+            src="./videos/v3.mp4"
+            muted
+            loop
+            class="video cursor-pointer"
+          ></video>
+        </div>
+        <div class="relative video lg:flex hidden">
+          <button class="video-btn"><i class="fa-solid fa-play"></i></button>
+          <video
+            src="./videos/v4.mp4"
+            muted
+            loop
+            class="video cursor-pointer"
+          ></video>
+        </div>
+      </div>
+
+      <!-- video row section end  -->
+
+      <!-- third product section  -->
+
+      <div class="products my-10 lg:px-[5.5vw] px-4 flex flex-col gap-8">
+        <div class="productsHeading flex justify-between items-center">
+          <h2 class="xl:text-4xl font-bold text-2xl tracking-wider">
+            Mega Deals
+          </h2>
+          <a
+            href=""
+            class="py-[.8rem] px-[1.1rem] rounded-full bg-slate-800 hover:bg-slate-700 cursor-pointer text-white"
+            ><i class="fa-solid fa-arrow-right lg:text-[1rem]"></i
+          ></a>
+        </div>
+        <div
+          class="product-row grid lg:grid-cols-4 gap-2 md:grid-cols-2 grid-cols-1"
+        >
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10 hidden">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/products/ND-CasualTrainers-ClassicBlack-_WebOptimized_a_1000x.jpg?v=1711690138"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">casual trainers</h4>
+                <p class="flex gap-4">
+                  Rs.1575
+                  <strike class="text-gray-400 tracking-wide">Rs.3499</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10 hidden">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/products/ND-SoleMaxSlipOn-UltraGrey-_WebOptimized_a_1000x.jpg?v=1692035751"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">sole max slip ons</h4>
+                <p class="flex gap-4">
+                  Rs.1399
+                  <strike class="text-gray-400 tracking-wide">Rs.2999</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-TLO-Black-_WebOptimized_a_1000x.jpg?v=1709199569"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">the loungesters</h4>
+                <p class="flex gap-4">
+                  Rs.1099
+                  <strike class="text-gray-400 tracking-wide">Rs.3799</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card border border-slate-700 rounded-md overflow-hidden cursor-pointer bg-white relative"
+          >
+            <div class="new-launch absolute right-2 top-1 z-10">
+              <p class="p-1">Newly Launched</p>
+            </div>
+            <div class="overflow-hidden border-b-[1px] border-slate-700">
+              <img
+                src="https://neemans.com/cdn/shop/files/ND-TB-Black-_WebOptimized_a_1000x.jpg?v=1709018612"
+                alt=""
+                class="hover:scale-110"
+              />
+            </div>
+            <div
+              class="product-description flex justify-between px-4 items-center py-4"
+            >
+              <div class="product-name flex flex-col gap-2">
+                <h4 class="text-xl font-bold uppercase">tread basics</h4>
+                <p class="flex gap-4">
+                  Rs.1099
+                  <strike class="text-gray-400 tracking-wide">Rs.3699</strike>
+                </p>
+              </div>
+              <div class="product-add-to-cart">
+                <i
+                  class="fa-solid fa-cart-shopping p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- third product section end  -->
+
+      <!-- for find nearby stores section  -->
+
+      <div class="find-nearby-stores lg:px-[5.5vw] px-4 flex">
+        <img
+          src="https://neemans.com/cdn/shop/files/1024_x_686_px_1024x1024.jpg?v=1689148314"
+          alt=""
+        />
+
+        <div class="cares-comfort">
+          <h2>Fashion that cares. Comfort that inspires.</h2>
+          <p>
+            Our innovation is fueled by the choices of an increasingly
+            earth-conscious consumer and hence we strive to innovate using
+            natural and sustainable materials that are good for the people and
+            the planet.
+          </p>
+          <img src="./images/img7.png" alt="" />
+        </div>
+      </div>
+
+      <!-- find nearby stores section end  -->
+    </article>
+
+    <!-- footer section  -->
+
+    <footer class="text-gray-200 body-font bg-slate-900">
+      <div>
+        <div class="footer-logo flex justify-center pt-10">
+          <a href="./index.html"
+            ><img src="./images/logo.png" alt="" class="lg:w-52 w-32"
+          /></a>
+        </div>
+      </div>
+      <div
+        class="container px-5 pt-4 lg:pt-12 pb-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-4 md:text-left text-center"
+        >
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              SHOP BY CATEGORY
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Shoes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Sneakers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Slippers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Sandals</a
+                >
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              SHOP BY TYPE
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >New Arrivals</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Best Seller</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Formal Shoes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Casual Shoes</a
+                >
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              INFORMATION
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Track Your Order</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Positive Change</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >The Journey</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Why Dream Steps</a
+                >
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium tracking-wide text-xl lg:text-2xl mb-3"
+            >
+              GUIDES
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Shoe Care</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Returns Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-300 hover:text-gray-500 tracking-wide cursor-pointer"
+                  >Cookie Policy</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-800">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-gray-300 text-sm text-center sm:text-left">
+            © 2024 Dream Steps —
+            <a
+              href="https://rohan04022003.github.io/myPortfolio"
+              rel="noopener noreferrer"
+              class="text-gray-500 ml-1"
+              target="_blank"
+              >@rohankumar</a
+            >
+          </p>
+          <span
+            class="inline-flex gap-4 sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+          >
+            <a
+              href="https://instagram.com/rohankumarmahto01?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
+              target="_blank"
+              ><i class="fa-brands fa-instagram btn instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100015224166657 "
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f btn facebook"></i
+            ></a>
+            <a href="https://github.com/Rohan04022003" target="_blank"
+              ><i class="fa-brands fa-github btn github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/rohan-kumar-5521aa253 "
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in btn linkedin"></i
+            ></a>
+            <a href="https://twitter.com/Rohankumar0402 " target="_blank"
+              ><i class="fa-brands fa-twitter btn twitter"></i
+            ></a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer section end  -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

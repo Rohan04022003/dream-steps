@@ -255,7 +255,7 @@ function displayCart() {
         <div class="flex items-center lg:gap-8 gap-3">
           <img src="${item.image}" alt="" class="lg:w-28 w-24">
           <div class="itemInfo flex flex-col gap-2">
-            <h3 class="text-[4vw] lg:text-xl uppercase tracking-wide cartProductName">${item.name}</h3>
+            <h3 class="text-[4vw] lg:text-xl capitalize tracking-wide cartProductName">${item.name}</h3>
             <p class="flex gap-4 text-xs">${item.price}</p>
           </div>
         </div>
@@ -413,30 +413,30 @@ let shoes = [
 ];
 let slippers = [
   {
-    name: "Striped Fusion Flips",
-    img: "https://neemans.com/cdn/shop/files/ND-Trio-BluenRed_WebOptimized_a_500x500.jpg?v=1705990913",
+    name: "Cork : Brilliant White",
+    img: "https://neemans.com/cdn/shop/files/ND-CorkSandals-BrilliantWhite-_WebOptimized_d_800x.jpg?v=1724987624",
     launch: "Best Selling",
     price: 699,
     maxPrice: 1499,
   },
   {
-    name: "Striped Fusion Flips",
-    img: "https://neemans.com/cdn/shop/files/ND-Trio-BrownnOrange_WebOptimized_a_500x500.jpg?v=1705990913",
+    name: "Cork : Classic Tan",
+    img: "https://neemans.com/cdn/shop/files/ND-CorkSandals-ClassicTan-_WebOptimized_d_800x.jpg?v=1724987620",
     launch: "Newly Launched",
     price: 699,
     maxPrice: 1499,
   },
   {
-    name: "Striped Fusion Flips",
-    img: "https://neemans.com/cdn/shop/files/ND-Trio-BluenOrange_WebOptimized_a_500x500.jpg?v=1705908615",
+    name: "Cork : Rich Cream",
+    img: "https://neemans.com/cdn/shop/files/ND-CorkSandals-RichCream-_WebOptimized_d_800x.jpg?v=1724987628",
     launch: "Best Selling",
     price: 699,
     maxPrice: 1499,
   },
   {
     name: "Striped Fusion Flips",
-    img: "https://neemans.com/cdn/shop/files/ND-Trio-GreennBlack_WebOptimized_a_500x500.jpg?v=1705990913",
-    launch: "Best Selling",
+    img: "https://neemans.com/cdn/shop/files/ND-CorkSandals-SolidBlack-_WebOptimized_d_800x.jpg?v=1724987629",
+    launch: "Cork : Solid Black",
     price: 699,
     maxPrice: 1499,
   },
@@ -518,29 +518,29 @@ let slippers = [
     maxPrice: 699,
   },
   {
-    name: "Cross Knit Sandals",
-    img: "https://neemans.com/cdn/shop/files/ND-CK-Beige_WebOptimized_e_500x500.jpg?v=1693505289",
+    name: "Eco Flips : black",
+    img: "https://neemans.com/cdn/shop/files/ND-EcoFlips-BeigeBG-CoalBlack_WebOptimized_a_dfeeb310-f494-47d5-bdf8-7158247bfc73_800x.jpg?v=1724988475",
     launch: "Best Selling",
     price: 899,
     maxPrice: 1799,
   },
   {
-    name: "Cross Knit Sandals",
-    img: "https://neemans.com/cdn/shop/files/ND-CK-Grey_WebOptimized_e_500x500.jpg?v=1693505289",
+    name: "Eco Flips : Olive",
+    img: "https://neemans.com/cdn/shop/files/ND-EcoFlips-BeigeBG-LeafyOliveGreen_WebOptimized_a_9b361e50-9f9a-4ce7-b231-c83f3db5a91f_800x.jpg?v=1724988476",
     launch: "Newly Launched",
     price: 899,
     maxPrice: 1799,
   },
   {
-    name: "Cross Knit Sandals",
-    img: "https://neemans.com/cdn/shop/files/ND-CK-Black_WebOptimized_e_500x500.jpg?v=1693505289",
+    name: "Eco Flips : Brown",
+    img: "https://neemans.com/cdn/shop/files/ND-EcoFlips-BeigeBG-SoilBrown_WebOptimized_a_f746b077-8beb-40d2-807c-0667c27ad03f_800x.jpg?v=1724988484",
     launch: "Best Selling",
     price: 899,
     maxPrice: 1799,
   },
   {
-    name: "Cross Knit Sandals",
-    img: "https://neemans.com/cdn/shop/files/ND-CK-Beige_WebOptimized_e_500x500.jpg?v=1693505289",
+    name: "Eco Flips : Purple",
+    img: "https://neemans.com/cdn/shop/files/ND-EcoFlips-BeigeBG-PurplePlum_WebOptimized_a_ca160565-e9dd-4ae4-9adf-cef79c57d737_800x.jpg?v=1724988484",
     launch: "Newly Launched",
     price: 899,
     maxPrice: 1799,
@@ -568,7 +568,7 @@ if (
   document.querySelector(".slipperActive").classList.remove("bg-slate-800");
   productData = shoes;
   document.querySelector(".product-hero-img").src =
-    "https://neemans.com/cdn/shop/collections/collectionpagebanner_EOSS_c40ff309-4b71-40bb-8413-196567a1a0fd.jpg?v=1708927804";
+    "./images/shoes-banner.jpg";
 }
 
 if (
@@ -582,7 +582,7 @@ if (
   document.querySelector(".shoesActive").classList.remove("bg-slate-800");
   productData = slippers;
   document.querySelector(".product-hero-img").src =
-    "https://neemans.com/cdn/shop/collections/collectionpagebanner_EOSS_4cfe7d37-3fe9-4f4e-b12a-2196476467a9.jpg?v=1708928320";
+    "./images/slipper-banner.png";
 }
 
 function loadPage(e) {
@@ -609,7 +609,7 @@ function loadPage(e) {
         class="product-description flex justify-between px-4 items-center py-4"
       >
         <div class="product-name flex flex-col gap-2">
-          <h4 class="text-xl font-bold uppercase">${e[i].name}</h4>
+          <h4 class="text-xl font-bold capitalize">${e[i].name}</h4>
           <p class="flex gap-4">
             Rs.${e[i].price}
             <strike class="text-gray-400 tracking-wide">Rs.${
@@ -816,7 +816,7 @@ function buyItems() {
             <img src=${elem.img} alt="" class="md:w-64 w-full rounded-md">
                 <div class="product-name flex md:flex-col flex-row items-start justify-between lg:gap-2 lg:w-[40%]">
                     <div>
-                    <h4 class="lg:text-lg font-bold uppercase">${elem.name}</h4>
+                    <h4 class="lg:text-lg font-bold capitalize">${elem.name}</h4>
                     <p class="flex gap-4">
                       ${elem.price}
                     </p>
@@ -900,23 +900,8 @@ helpAndSupports();
 
 if (fileName == "brand.html") {
   function brands() {
-    let temp = 1;
-    if (temp) {
-      document.querySelector(".brands-hero").src =
-        "https://neemans.com/cdn/shop/collections/collectionpagebanner_EOSS_c40ff309-4b71-40bb-8413-196567a1a0fd.jpg?v=1708927804";
-      temp = 0;
-    }
-    setInterval(() => {
-      if (temp) {
-        document.querySelector(".brands-hero").src =
-          "https://neemans.com/cdn/shop/collections/collectionpagebanner_EOSS_c40ff309-4b71-40bb-8413-196567a1a0fd.jpg?v=1708927804";
-        temp = 0;
-      } else {
-        document.querySelector(".brands-hero").src =
-          "https://neemans.com/cdn/shop/collections/collectionpagebanner_EOSS_4cfe7d37-3fe9-4f4e-b12a-2196476467a9.jpg?v=1708928320";
-        temp = 1;
-      }
-    }, 10000);
+    document.querySelector(".brands-hero").src =
+        "./images/brands-page-banner.jpg";
 
     // for recycle div
 
@@ -929,7 +914,7 @@ if (fileName == "brand.html") {
     document.querySelector(".plastic-bag-number").innerText = plasticBagNumber;
 
     if (!plasticNumber) {
-      plasticNumber = 0;
+      plasticNumber = 23412;
     } else {
       plasticNumber = parseInt(plasticNumber);
     }
@@ -941,7 +926,7 @@ if (fileName == "brand.html") {
     setInterval(increasePlasticNumber, 10000);
 
     if (!tyreNumber) {
-      tyreNumber = 0;
+      tyreNumber = 3453;
     } else {
       tyreNumber = parseInt(tyreNumber);
     }
@@ -953,7 +938,7 @@ if (fileName == "brand.html") {
     setInterval(increasetyreNumber, 15000);
 
     if (!plasticBagNumber) {
-      plasticBagNumber = 0;
+      plasticBagNumber = 34523;
     } else {
       plasticBagNumber = parseInt(plasticBagNumber);
     }
